@@ -32,6 +32,7 @@ import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
 import /vendor/etc/init/hw/init.wifi.rc
 import /vendor/etc/init/hw/init.zramstarter.rc
+import /vendor/etc/init/hw/init.Msm8917Parts.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
