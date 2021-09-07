@@ -31,9 +31,9 @@ public interface Utils {
 
     boolean SETONBOOT_DEFAULT = false;
     int MINIMUM_DEFAULT = 35;
-    int RED_DEFAULT = 255;
-    int GREEN_DEFAULT = 255;
-    int BLUE_DEFAULT = 255;
+    int RED_DEFAULT = 256;
+    int GREEN_DEFAULT = 256;
+    int BLUE_DEFAULT = 256;
     int SATURATION_DEFAULT = 35;
     int SATURATION_OFFSET = 225;
     int VALUE_DEFAULT = 127;
