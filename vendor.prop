@@ -38,15 +38,12 @@ vendor.voice.path.for.pcm.voip=true
 vendor.voice.voip.conc.disabled=true
 
 # ART
-dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3
-dalvik.vm.boot-dex2oat-threads=4
-dalvik.vm.dex2oat-cpu-set=0,1,2,3
-dalvik.vm.dex2oat-filter=quicken
-dalvik.vm.dex2oat-threads=4
 dalvik.vm.dex2oat64.enabled=true
-dalvik.vm.image-dex2oat-cpu-set=0,1,2,3
-dalvik.vm.image-dex2oat-filter=quicken
-dalvik.vm.image-dex2oat-threads=4
+dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-filter=speed
+ro.sys.fw.dex2oat_thread_count=4
 
 # Apex
 ro.apex.updatable=false
@@ -87,11 +84,10 @@ ro.config.enable_upgrade_criadj=true
 # Dalvik
 dalvik.vm.heapgrowthlimit=128m
 dalvik.vm.heapmaxfree=8m
-dalvik.vm.heapminfree=4m
+dalvik.vm.heapminfree=512k
 dalvik.vm.heapsize=256m
-dalvik.vm.heapstartsize=16m
+dalvik.vm.heapstartsize=8m
 dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.foreground-heap-growth-multiplier=2.0
 
 # Graphics
 debug.egl.hw=0
@@ -129,13 +125,9 @@ ro.hwui.text_large_cache_height=2048
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
-ro.vendor.qti.sys.fw.bservice_limit=2
-ro.vendor.qti.sys.fw.bservice_age=5000
-ro.config.force_trim=true
-pm.dexopt.downgrade_after_inactive_days=10
 ro.vendor.extension_library=libqti-perfd-client.so
 vendor.perf.iop_v3.enable=1
-ro.vendor.qti.config.swap=0
+ro.vendor.qti.config.swap=1
 
 # Power
 vendor.power.pasr.enabled=true
