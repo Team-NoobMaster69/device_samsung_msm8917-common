@@ -60,14 +60,15 @@ void property_override(char const prop[], char const value[])
 }
 
 void dalvik_vm(std::string device){
-    if (device.find("j4corelte") != std::string::npos ){
-        property_override("dalvik.vm.heapgrowthlimit", "128m");
+    if (device.find("j4corelte") != std::string::npos || device.find("j4coreltejx") != std::string::npos){
+        property_override("dalvik.vm.heapgrowthlimit", "96m");
         property_override("dalvik.vm.heapmaxfree", "8m");
         property_override("dalvik.vm.heapminfree", "512k");
         property_override("dalvik.vm.heapsize", "256m");
         property_override("dalvik.vm.heapstartsize", "8m");
         property_override("dalvik.vm.heaptargetutilization","0.75");
         property_override("ro.dalvik.vm.native.bridge","0");
+        property_override("dalvik.vm.madvise-random", "true");
         property_override("pm.dexopt.shared","quicken");
 
     } else if (device.find("j4primelte") != std::string::npos){
@@ -91,7 +92,7 @@ void dalvik_vm(std::string device){
 }
 
 void config_dha(std::string device){
-    if (device.find("j4corelte") != std::string::npos ){
+    if (device.find("j4corelte") != std::string::npos || device.find("j4coreltejx") != std::string::npos){
         //TODO
     }else if (device.find("j4primelte") != std::string::npos){
         //TODO
@@ -103,8 +104,8 @@ void config_dha(std::string device){
 }
 
 void config_lmk(std::string device){
-    if (device.find("j4corelte") != std::string::npos ){
-    property_override("ro.lmk.kill_heaviest_task","false");
+    if (device.find("j4corelte") != std::string::npos || device.find("j4coreltejx") != std::string::npos){
+    property_override("ro.lmk.kill_heaviest_task","true");
     property_override("ro.lmk.critical_upgrade","true");
     property_override("ro.lmk.upgrade_pressure","100");
     property_override("ro.lmk.critical","100");
@@ -134,7 +135,7 @@ LOG(ERROR) << "LMK configs for '" << device.c_str() << "' device\n";
 }
 
 void config_lcd_density(std::string device){
-    if (device.find("j4corelte") != std::string::npos ){
+    if (device.find("j4corelte") != std::string::npos || device.find("j4coreltejx") != std::string::npos){
         property_override("ro.sf.lcd_density","320");
     }else if ((device.find("j4primelte") != std::string::npos) 
      || (device.find("j6primelte") != std::string::npos)){

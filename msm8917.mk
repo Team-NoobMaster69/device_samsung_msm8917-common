@@ -155,9 +155,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service
 
 #Parts
-PRODUCT_PACKAGES += \
-    ZenParts \
-    init.Msm8917Parts.rc
+#PRODUCT_PACKAGES += \
+#    Msm8917Parts \
+#    init.Msm8917Parts.rc
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -363,7 +363,6 @@ PRODUCT_PACKAGES += \
     
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.3-radio-service.samsung \
     vendor.samsung.hardware.radio@1.2.vendor \
     android.hardware.radio.config@1.0 \
     libjson \
@@ -371,6 +370,9 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full \
     libshims_ril
+
+
+#    android.hardware.radio@1.3-radio-service.samsung \
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -444,4 +446,5 @@ $(call inherit-product, vendor/samsung/msm8917-common/msm8917-common-vendor.mk)
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-    Via
+    Via \
+    GCamGo

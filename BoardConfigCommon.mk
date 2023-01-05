@@ -36,7 +36,7 @@ TARGET_BOOTLOADER_BOARD_NAME := RG13A002KU
 TARGET_NO_BOOTLOADER := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-12-01
+VENDOR_SECURITY_PATCH := 2020-12-01
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 loop.max_part=7
@@ -45,7 +45,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_SOURCE := kernel/samsung/msm8917_medusa
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8917
 
 # FM
 BOARD_HAS_QCA_FM_SOC := "cherokee"

@@ -27,7 +27,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     vendor.perf.iop_v3.enable=1 \
-    ro.vendor.qti.config.swap=0
+    ro.vendor.qti.config.swap=1 \
+    ro.vendor.qti.am.reschedule_service=true
 
 #Graphics properties
 #debug.sf.enable_hwc_vds=1
@@ -77,19 +78,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #TODO
 #DHA Tune vai para init lib
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.add_bonusEFK=1 \
-    ro.config.dha_cached_min=0 \
-    ro.config.dha_cached_max=2 \
-    ro.config.dha_empty_min=0 \
-    ro.config.dha_empty_max=6 \
-    ro.config.dha_empty_init=0 \
-    ro.config.dha_lmk_scale=0.990 \
-    ro.config.dha_th_rate=3 \
-    ro.cfg.dha_2ndprop_thMB=1024 \
-    ro.cfg.dha_cached_max=2 \
-    ro.cfg.dha_empty_max=2 \
-    ro.cfg.dha_empty_init=0 \
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.config.add_bonusEFK=1 \
+#    ro.config.dha_cached_min=0 \
+#   ro.config.dha_cached_max=2 \
+#    ro.config.dha_empty_min=0 \
+#    ro.config.dha_empty_max=6 \
+#    ro.config.dha_empty_init=0 \
+#    ro.config.dha_lmk_scale=0.990 \
+#    ro.config.dha_th_rate=3 \
+#    ro.cfg.dha_2ndprop_thMB=1024 \
+#    ro.cfg.dha_cached_max=2 \
+#    ro.cfg.dha_empty_max=2 \
+#    ro.cfg.dha_empty_init=0 \
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -221,7 +222,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdcp2.rx=tz \
     ro.multisim.simslotcount=2 \
     ro.telephony.iwlan_operation_mode=legacy \
-    persist.vendor.radio.procedure_bytes=SKIP
+    persist.vendor.radio.procedure_bytes=SKIP \
+    persist.radio.multisim.config=dsds
 
 #Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \

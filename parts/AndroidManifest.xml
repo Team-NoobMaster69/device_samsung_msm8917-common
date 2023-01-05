@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.asus.zenparts"
+    package="com.samsung.msm8917"
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
@@ -44,7 +44,7 @@
         <activity
             android:name=".DeviceSettingsActivity"
             android:exported="false"
-            android:icon="@drawable/ic_asus"
+            android:icon="@drawable/ic_phone_gear"
             android:label="@string/advanced_settings"
             android:launchMode="singleTask">
             <intent-filter>
@@ -60,7 +60,7 @@
                 android:resource="@string/advanced_settings_summary" />
         </activity>
         <activity-alias
-            android:name="com.asus.zenparts.DeviceSettings"
+            android:name="com.samsung.msm8917.DeviceSettings"
             android:exported="true"
             android:enabled="true"
             android:label="@string/advanced_settings"
@@ -74,7 +74,7 @@
                 android:value="com.android.settings.category.ia.homepage" />
             <meta-data
                 android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_asus" />
+                android:resource="@drawable/ic_phone_gear" />
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/advanced_settings_summary" />
@@ -90,24 +90,25 @@
         </intent-filter>
         </activity>
         <service
-            android:name=".ZenpartsTile"
+            android:name=".Msm8917PartsTile"
             android:enabled="true"
-            android:icon="@drawable/qs_asus"
+            android:icon="@drawable/ic_phone_gear"
             android:label="@string/advanced_settings"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+        <!--
         <service
             android:name="com.asus.zenparts.DimmerTile"
             android:icon="@drawable/ic_backlight"
             android:label="@string/backlight_dimmer"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
+        -->
     </application>
 </manifest>

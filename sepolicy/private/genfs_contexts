@@ -12,3 +12,7 @@ genfscon sysfs /kernel/sound_control/speaker_gain                               
 
 # USB Fastcharge
 #genfscon sysfs /kernel/fast_charge/force_fast_charge                                     u:object_r:sysfs_fcharge:s0
+
+#Tourch
+genfscon sysfs /sys/class/leds/S2MU005_FLASH_LED/brightness   u:object_r:sysfs_tbrightness:s0
+genfscon sysfs /sys/class/leds/S2MU005_TORCH_LED/brightness   u:object_r:sysfs_tbrightness:s0

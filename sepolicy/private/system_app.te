@@ -37,8 +37,8 @@ allow system_app sysfs_sgain:file { open read getattr write };
 #allow system_app spectrum_prop:property_service set;
 
 # Torch
-#allow system_app sysfs_tbrightness:file { open getattr write };
-#allow system_app sysfs_leds:dir search;
+allow system_app sysfs_tbrightness:file write;
+allow system_app sysfs_leds:dir search;
 
 # Touchboost
 #allow system_app sysfs_touchboost:file { open read getattr write };
